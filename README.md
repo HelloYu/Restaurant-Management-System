@@ -5,7 +5,7 @@
 
  * **Node** 服务器端。
  * **AngularJS** 作为后台管理界面 MVVM 框架。
- * **Bootstrap 3** 作为后台管理界面 UI 框架。
+ * **Bootstrap 4** 作为后台管理界面 UI 框架。
  * **MongoDB** 作为数据库。
  * **Jasmine** 测试框架。
  * **Gulp** 自动化管理。
