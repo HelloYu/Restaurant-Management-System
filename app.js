@@ -12,3 +12,4 @@ app.get('/', function (req, res) {
 	var html = fs.createReadStream('./www/index.html');
 	html.pipe(res);
 }).listen(3000);
+console.info('server is rolling up! plz visit localhost:3000');

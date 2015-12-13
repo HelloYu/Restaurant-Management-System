@@ -16,7 +16,7 @@
 ```javascript
 npm install
 ```
-再用进入项目根目录`node`运行。
+再进入项目根目录`node`运行。
 ```javascript
 node app.js
 ```
