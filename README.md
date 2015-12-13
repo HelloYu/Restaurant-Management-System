@@ -11,5 +11,20 @@
  * **Gulp** 自动化管理。
  * **RESTful** API接口规范。
 
+## 使用
+先把依赖的包安装下呗。
+```javascript
+npm install
+```
+再用进入项目根目录`node`运行。
+```javascript
+node app.js
+```
+运行下测试用例下也不错。
+```javascript
+npm test
+```
+
+
 ## 搭建记录
  - [初始化项目](http://www.yuyanping.com/restaurant-management-system/init-project-step-one/)
