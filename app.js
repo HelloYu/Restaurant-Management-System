@@ -1,15 +1,26 @@
 /**
  *
- * version: 1.0.0
- * time: 2015-12-09
+ * version: 1.0.1
+ * time: 2015-12-14
  *
  */
 
-var express = require('express');
-var app = express();
-var fs = require('fs');
-app.get('/', function (req, res) {
-	var html = fs.createReadStream('./www/index.html');
-	html.pipe(res);
-}).listen(3000);
-console.info('server is rolling up! plz visit localhost:3000');
+var express = require('express'),
+		app = express(),
+		bodyParser = require('body-parser'),
+		login = require('./server/routes/login_route');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
+
+//login 路由
+app.use(login);
+app.get('/test',function(req,res) {
+	 res.end('test');
+})
+
+var port = process.env.PORT || 8888;
+
+app.listen(port);
+console.log('server start on port ' + port);

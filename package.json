@@ -4,6 +4,7 @@
   "description": "A restaurant management system base on Node",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3"
   },
   "devDependencies": {},
