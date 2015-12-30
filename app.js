@@ -1,14 +1,15 @@
 /**
  *
- * version: 1.0.1
- * time: 2015-12-14
+ * version: 1.0.2
+ * time: 2015-12-31
  *
  */
 
-var express = require('express'),
-		app = express(),
-		bodyParser = require('body-parser'),
-		login = require('./server/routes/login.route');
+var
+  express = require('express'),
+  app = express(),
+  bodyParser = require('body-parser'),
+  login = require('./server/routes/login.route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

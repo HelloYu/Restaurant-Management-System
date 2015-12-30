@@ -6,7 +6,9 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "mongodb": "^2.1.2",
+    "monk": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {

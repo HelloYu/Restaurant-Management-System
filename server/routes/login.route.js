@@ -9,13 +9,17 @@ router.post('/login',function(req,res) {
 		password: req.body.password
 	}
 
-	//都暂时没有考虑使用回调和promise
-	var auth = loginCtrl.login(user);
-  if (auth) {
-  	res.json({status:200,user:user});
-  } else {
-  	res.json({status:401,message:'授权失败！'});
-  }
+	// 开始使用回调
+	loginCtrl.login(user,_cb);
+
+	function _cb(user) {
+    if (user.length) {
+      res.json({status:200,user:user});
+    } else {
+      res.json({status:401,message:'授权失败！'});
+    }
+	};
+ 
 
 });
 

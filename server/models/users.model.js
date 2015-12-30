@@ -1,45 +1,31 @@
-var users = [{
-	username: 'admin',
-	password: 'admin',
-	role: 'waiter'
-},{
-	username: 'test',
-	password: 'test',
-	role: 'chief'
-}]
-
 'use strict';
-//提供给用户登录
-module.exports.findOne = function(username) {
-	
-	console.info(username);
-	if (!username) {
-		throw new Error('username must not be empty!');
-	} 
-	var i = 0,
-			item;
-	for (; item = users[i]; i++) {
-		if (item.username == username) return item;
-	}
+
+var
+  monk = require('monk'),
+  db = monk('localhost:27017/restaurant');
+
+var users = {
+  /**
+  * @method find
+  * @param {username|empty}
+  * 如果参数为空，返回集合所有用户，或者按用户名查找
+  * @return {Object} user
+  * 返回用户对象，或者集合
+  */
+  find: find,
+}
+
+function find(user,cb) {
+  
+  var users = db.get('users');
+  users.find(user,_cb);
+
+  function _cb(err,doc) {
+    if (err) throw err;
+    console.info(doc);
+    cb(doc);
+    db.close();
+  };
 };
 
-//暂时不进行回调异步处理
-module.exports.find = function(username) {
-	
-	//如果空，返回全部
-	if (!username) {
-		return users;
-	} 
-
-	//非空按条件查询，暂时为姓名数组
-	var i = 0,
-			len = username.length,
-			result = [];
-	for (; i < len; i++) {
-		var item = username[i];
-		if (users.indexOf(item) != -1) {
-			result.push(item);
-		}
-	}
-	return result;
-};
+module.exports = users;
