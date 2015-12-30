@@ -1,5 +1,5 @@
 var express = require('express'),
-		loginCtrl = require('../controllers/login_ctrl'),
+		loginCtrl = require('../controllers/login.controller'),
 		router = express.Router();
 
 router.post('/login',function(req,res) {
