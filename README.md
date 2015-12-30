@@ -27,8 +27,10 @@ npm test
 
 
 ## 搭建记录
- - 1、[初始化项目][1]
- - 2、[构建基础架构][2]
+ - 1、[初始化项目][初始化项目]
+ - 2、[构建基础架构][构建基础架构]
+ - 3、[整合MongoDB][整合MongoDB]
 
-[1]:http://www.yuyanping.com/restaurant-management-system/init-project-step-one/
-[2]:http://www.yuyanping.com/restaurant-management-system/setting-up-server-step-two/
+[初始化项目]:http://www.yuyanping.com/restaurant-management-system/init-project-step-one/ "初始化项目"
+[构建基础架构]:http://www.yuyanping.com/restaurant-management-system/setting-up-server-step-two/ "构建基础架构"
+[整合MongoDB]:http://www.yuyanping.com/restaurant-management-system/Integrate-MongoDB-step-three/ "整合MongoDB"

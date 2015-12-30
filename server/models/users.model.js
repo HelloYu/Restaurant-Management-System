@@ -10,7 +10,7 @@ var users = {
   * @param {username|empty}
   * 如果参数为空，返回集合所有用户，或者按用户名查找
   * @return {Object} user
-  * 返回用户对象，或者集合
+  * 返回用户对象，或者集合数组
   */
   find: find,
 }
