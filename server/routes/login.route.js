@@ -3,7 +3,7 @@ var express = require('express'),
 		router = express.Router();
 
 router.post('/login',function(req,res) {
-	console.info('req.body.username'+req.body.username);
+
 	var user = { 
 		username: req.body.username,
 		password: req.body.password
@@ -12,8 +12,8 @@ router.post('/login',function(req,res) {
 	// 开始使用回调
 	loginCtrl.login(user,_cb);
 
-	function _cb(user) {
-    if (user.length) {
+	function _cb(err,user) {
+    if (err) {
       res.json({status:200,user:user});
     } else {
       res.json({status:401,message:'授权失败！'});

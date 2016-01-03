@@ -12,6 +12,12 @@
  * **RESTful** API接口规范。
 
 ## 使用
+### MongoDB 
+项目使用MongoDB作为数据库，所以需要单独进行安装，可以参看[整合MongoDB][整合MongoDB]，进行安装，安装完后，直接导入本项目，根目录下，`db`文件夹内的数据库。导入命令使用如入：
+```javascript
+mongorestore.exe -d restaurant <项目绝对路径+db\restaurant>
+```
+### 运行
 先把依赖的包安装下呗。
 ```javascript
 npm install
