@@ -1,10 +1,10 @@
-var userModel = require('../models/users.model');
+var userModel = require('../models/user.model');
 
 var users = {
-	add: add,
-	get: get,
-	update: update,
-	remove: remove
+  add: add,
+  get: get,
+  update: update,
+  remove: remove
 };
 
 

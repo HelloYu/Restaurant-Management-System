@@ -1,4 +1,4 @@
-var user = require('../server/models/users.model');
+var user = require('../server/models/user.model');
 
 describe('user.find', function() {
 	describe('testing find method',function(){

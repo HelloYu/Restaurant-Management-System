@@ -1,4 +1,4 @@
-var userModel = require('../models/users.model');
+var userModel = require('../models/user.model');
 
 
 module.exports.login = function(user,cb) {

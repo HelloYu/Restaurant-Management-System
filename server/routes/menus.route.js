@@ -1,12 +1,12 @@
 var express = require('express'),
-		usersCtrl = require('../controllers/users.controller'),
+		menusCtrl = require('../controllers/menus.controller'),
 		router = express.Router();
 
-router.post('/users',add);
-router.get('/users',get);
-router.get('/users/:id',get);
-router.put('/users/:id',update);
-router.delete('/users/:id',remove);
+router.post('/menus',add);
+router.get('/menus',get);
+router.get('/menus/:id',get);
+router.put('/menus/:id',update);
+router.delete('/menus/:id',remove);
 
 function add(req,res) {
 
@@ -16,7 +16,7 @@ function add(req,res) {
 		role: req.body.role,
 	}
 
-	usersCtrl.add(user,_cb);
+	menusCtrl.add(user,_cb);
 
 	function _cb(err,user) {
     if (!err) {
@@ -35,7 +35,7 @@ function get(req,res) {
 		user['_id'] = req.params['id'];
 	}
 	
-	usersCtrl.get(user,_cb);
+	menusCtrl.get(user,_cb);
 
 	function _cb(err,user) {
     if (!err) {
@@ -58,7 +58,7 @@ function update(req,res) {
 	}
 
 	user._id = req.params.id;
-	usersCtrl.update(user,_cb);
+	menusCtrl.update(user,_cb);
 
 	function _cb(err,user) {
     if (!err) {
@@ -78,7 +78,7 @@ function remove(req,res) {
 	}
 	
 
-	usersCtrl.remove(user,_cb);
+	menusCtrl.remove(user,_cb);
 
 	function _cb(err,user) {
     if (!err) {

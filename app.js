@@ -1,7 +1,7 @@
 /**
  *
- * version: 1.0.3
- * time: 2016-01-03
+ * version: 1.0.4
+ * time: 2016-01-16
  *
  */
 
@@ -11,6 +11,7 @@ var
   bodyParser = require('body-parser'),
   login = require('./server/routes/login.route'),
   users = require('./server/routes/users.route');
+  menus = require('./server/routes/menus.route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -20,6 +21,8 @@ app.use(bodyParser.urlencoded());
 app.use(login);
 // 用户操作路由
 app.use(users);
+// 菜单操作路由
+app.use(menus);
 
 
 var port = process.env.PORT || 7777;
